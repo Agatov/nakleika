@@ -1,0 +1,19 @@
+%legend
+  Список отзывов
+  %a.btn{href: new_admin_report_path, style: 'float: right'}
+    Добавить
+
+
+%table.table
+  %thead
+    %th
+      Имя
+    %th
+      = '...'
+  %tbody
+    - @reports.each do |report|
+      %tr
+        %td
+          = report.username
+        %td
+          = link_to 'Редактировать', edit_admin_report_path(report)

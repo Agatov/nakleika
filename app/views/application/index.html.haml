@@ -1,0 +1,106 @@
+#topbar
+  .wrapper
+    .topbar-phone
+      = @setting.phone
+
+    %ul.topbar-links
+      %li
+        %a{href: '#dostavka'}
+          Доставка
+      %li
+        %a{href: '#howmuch'}
+          Сколько стоит?
+
+      %li
+        %a{href: '#original'}
+          Как проверить?
+
+%section#intro
+  .wrapper
+    .intro-title
+      = @template.title
+
+    .intro-text
+      = @template.title_mini
+
+%section#video
+  -#.section-title
+    Вся суть - в видео!
+
+  .wrapper
+    .video-block
+      %iframe{src: '//www.youtube.com/embed/hVwUUgdF2-k?rel=0&enablejsapi=1',
+              width: 960,
+              height: 540, frameborder: 0}
+
+
+
+= render partial: 'application/blocks', locals: {template: @template}
+%section
+  .wrapper
+    = render partial: 'application/order_form', locals: {setting: @setting}
+
+
+%section
+  .wrapper
+
+
+    #second-block
+
+      #how
+        .title
+          = @template.first_block_header
+        .content
+          = @template.first_block_text
+
+      #about
+        .title
+          = @template.second_block_header
+        .content
+          = @template.second_block_text
+
+
+%section
+  .wrapper
+
+    #about2
+      .title
+        = @template.third_block_header
+      .content
+        = @template.third_block_text
+
+
+
+%section
+  .wrapper
+    #about3
+      .title
+        Как это выглядит?
+
+      .content
+        = image_tag '11111.jpg', width: 910
+        Таким образом пленка засвечивается при съемке с обычной или инфракрасной вспышкой.
+
+%section#faq
+  .section-title
+    Ответы на вопросы:
+  .wrapper
+    = render partial: 'application/faq', locals: {questions: @questions}
+
+
+%section
+  .section-title
+    Отзывы наших клиентов:
+
+  .wrapper
+    = render partial: 'application/reports', locals: {reports: @reports}
+
+%section
+  -#.section-title
+    Остались вопросы?
+  .wrapper
+    = render partial: 'application/order_form', locals: {setting: @setting}
+
+#footer
+  .wrapper
+    Уважаемый покупатель, продавец доводит до Вашего сведения, что в соответствии с законодательством Российский Федерации использование любых приспособлений, материалов, устройств, механизмов создающих препятствие в идентификации номерного знака установленного на транспортном средстве запрещено. Ответственность за нарушение законодательства, правил дорожного движения в Российской Федерации возлагается на лицо допустившее нарушение. Продавец не несет ответственности за использование покупателем, либо иным лицом (собственником транспортного средства, либо водителем) материалов приобретенных в нашем Интернет магазине с целью сокрытия административных правонарушений в области дорожного движения. Продавец так же не несет ответственности перед покупателем, либо его имуществом в результате не правильного использования товара либо его составных частей.

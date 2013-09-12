@@ -1,0 +1,8 @@
+= simple_form_for @setting, url: admin_setting_path, html: {class: 'form-vertical'} do |f|
+
+  = f.input :phone, input_html: {class: :span8}
+  = f.input :old_price, input_html: {class: :span8}
+  = f.input :current_price, input_html: {class: :span8}
+
+  .form-actions
+    = f.submit 'Готово', class: 'btn'

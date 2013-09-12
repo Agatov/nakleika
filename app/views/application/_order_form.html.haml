@@ -1,0 +1,31 @@
+#order-form
+  .offer
+    .offer-text
+      Шесть наклеек на номер
+      %br
+      за
+      %span.strike #{setting.old_price} рублей
+      %span.price #{setting.current_price} рублей
+    .action
+      .action-text
+        До конца акции:
+      .action-timer
+        03
+        %span.small часа
+        24
+        %span.small минуты
+        11
+        %span.small секунд
+
+
+  .form
+    .order-form
+      %input{type: :text, placeholder: 'Введите ваше имя'}
+      %input{type: :text, placeholder: 'Введите ваш email'}
+      %button
+        Получить скидку
+
+    .phone-text
+      Или позвоните по номеру
+    .phone
+      = setting.phone

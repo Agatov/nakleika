@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  title_mini: MyString
+  first_trigger_header: MyString
+
+two:
+  title: MyString
+  title_mini: MyString
+  first_trigger_header: MyString

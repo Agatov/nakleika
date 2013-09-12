@@ -1,0 +1,8 @@
+- reports.each do |report|
+  .question.report
+    - if report.avatar?
+      = image_tag report.avatar_url(:thumb), align: 'top'
+    .title
+      = report.username
+    .content
+      = report.content

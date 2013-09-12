@@ -1,0 +1,12 @@
+= simple_form_for report, url: url, html: {class: 'form-vertical'} do |f|
+
+  = f.input :username, input_html: {class: :span8}
+  = f.input :avatar
+  - if report.avatar?
+    .form-actions
+      = image_tag report.avatar_url(:default)
+  = f.input :content, input_html: {class: :span8, rows: 10}
+
+
+  .form-actions
+    = f.submit 'Готово', class: 'btn'

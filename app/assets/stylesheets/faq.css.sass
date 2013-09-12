@@ -1,0 +1,59 @@
+#faq
+  background: #fff
+  border-top: 1px solid #eee
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+
+.question
+  margin-bottom: 40px
+  color: #fff
+  position: relative
+
+  &.report
+    .title
+      padding-left: 50px
+
+  &.last
+    margin-bottom: 0px
+
+  &:nth-child(2n)
+
+    .title
+      background: #3498DB
+    .content
+      background: #2980B9
+
+
+  img
+    position: absolute
+    top: -25px
+    left: -20px
+    border: 2px solid #2C3E50
+
+  .title
+    padding: 15px
+    font-size: 18px
+    font-weight: bold
+    background: #34495E
+
+  .content
+    padding: 15px
+    font-size: 16px
+    line-height: 1.4
+    background: #2C3E50
+
+  .image
+    width: 75px
+    height: 75px
+    background: url('/assets/11.png') no-repeat
+    background-size: cover
+    position: absolute
+    top: 25px
+    left: 25px
+

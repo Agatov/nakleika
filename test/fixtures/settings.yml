@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  phone: MyString
+  old_price: MyString
+  current_price: MyString
+
+two:
+  phone: MyString
+  old_price: MyString
+  current_price: MyString

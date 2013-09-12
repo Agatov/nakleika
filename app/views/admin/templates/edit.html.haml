@@ -1,0 +1,30 @@
+= simple_form_for @template, url: admin_template_path, html: {class: 'form-vertical'} do |f|
+
+  = f.input :title, input_html: {class: :span8}
+  = f.input :title_mini, input_html: {class: :span8}
+
+  .form-actions
+    %legend
+      Настройки триггеров
+    = f.input :first_trigger_header, input_html: {class: :span6}
+    = f.input :first_trigger_text, input_html: {class: :span6, rows: 10}
+    = f.input :second_trigger_header, input_html: {class: :span6}
+    = f.input :second_trigger_text, input_html: {class: :span6, rows: 10}
+    = f.input :third_trigger_header, input_html: {class: :span6}
+    = f.input :third_trigger_text, input_html: {class: :span6, rows: 10}
+
+  .form-actions
+    %legend
+      Текст основных блоков текста
+    = f.input :first_block_header, input_html: {class: :span6}
+    = f.input :first_block_text, input_html: {class: :span6, rows: 10}
+    = f.input :second_block_header, input_html: {class: :span6}
+    = f.input :second_block_text, input_html: {class: :span6, rows: 10}
+    = f.input :third_block_header, input_html: {class: :span6}
+    = f.input :third_block_text, input_html: {class: :span6, rows: 10}
+    -#= f.input :fourth_block_header, input_html: {class: :span6}
+    -#= f.input :fourth_block_text, input_html: {class: :span6, rows: 10}
+
+
+  .form-actions
+    = f.submit 'Готово', class: 'btn'

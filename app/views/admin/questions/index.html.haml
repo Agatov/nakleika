@@ -1,0 +1,19 @@
+%legend
+  Список вопросов
+  %a.btn{href: new_admin_question_path, style: 'float: right'}
+    Добавить
+
+
+%table.table
+  %thead
+    %th
+      Вопрос
+    %th
+      = '...'
+  %tbody
+    - @questions.each do |question|
+      %tr
+        %td
+          = question.question
+        %td
+          = link_to 'Редактировать', edit_admin_question_path(question)

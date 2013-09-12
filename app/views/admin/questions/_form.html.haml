@@ -1,0 +1,9 @@
+= simple_form_for question, url: url, html: {class: 'form-vertical'} do |f|
+
+  = f.input :question, input_html: {class: :span8}
+  = f.input :anchor, input_html: {class: :span8}
+  = f.input :answer, input_html: {class: :span8, rows: 10}
+
+
+  .form-actions
+    = f.submit 'Готово', class: 'btn'
